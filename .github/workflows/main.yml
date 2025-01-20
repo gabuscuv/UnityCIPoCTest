@@ -61,7 +61,7 @@ jobs:
       env:
             BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
             CHANNEL: webgl
-            ITCH_GAME: $ITCH_GAME
+            ITCH_GAME: ${{ vars.ITCH_GAME }}
             ITCH_USER: ${{ secrets.ITCHIO_USER }}
             PACKAGE: build/WebGL
   publishWindows:
@@ -79,8 +79,8 @@ jobs:
       env:
             BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
             CHANNEL: windows
-            ITCH_GAME: unity-ci-poc
-            ITCH_USER: othascarlet
+            ITCH_GAME: ${{ vars.ITCH_GAME }}
+            ITCH_USER: ${{ secrets.ITCHIO_USER }}
             PACKAGE: build/StandaloneWindows64
   publishLinux:
     name: Publish for Linux
