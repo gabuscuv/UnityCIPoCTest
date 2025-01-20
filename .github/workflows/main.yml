@@ -63,7 +63,7 @@ jobs:
             CHANNEL: webgl
             ITCH_GAME: ${{ vars.ITCH_GAME }}
             ITCH_USER: ${{ secrets.ITCHIO_USER }}
-            PACKAGE: build/WebGL
+            PACKAGE: build/WebGL/WebGL
   publishWindows:
     name: Publish for Windows
     runs-on: ubuntu-latest
